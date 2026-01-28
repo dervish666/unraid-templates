@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>UnraidMonitorBot</Name>
+  <Repository>dervish/unraidmonitorbot:latest</Repository>
+  <Registry>https://hub.docker.com/r/dervish/unraidmonitorbot</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/dervish666/UnraidMonitor/issues</Support>
+  <Project>https://github.com/dervish666/UnraidMonitor</Project>
+  <Overview>Telegram bot for monitoring Docker containers and Unraid servers. Get real-time alerts, check container status, view logs, control containers, and monitor server health - all from Telegram.&#xD;
+&#xD;
+Features:&#xD;
+- Container crash alerts with quick action buttons&#xD;
+- Resource monitoring (CPU/memory thresholds)&#xD;
+- Log watching with error detection&#xD;
+- AI-powered diagnostics (requires Anthropic API key)&#xD;
+- Unraid server monitoring (temps, array, disks)&#xD;
+- Natural language chat interface&#xD;
+- Smart ignore patterns for known errors&#xD;
+- Mute system for alerts&#xD;
+&#xD;
+Setup requires a Telegram bot token from @BotFather and your Telegram user ID.</Overview>
+  <Category>Tools:Utilities Network:Management</Category>
+  <Icon>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/dervish666/unraid-templates/main/dervish/unraidmonitorbot.xml</TemplateURL>
+  <ExtraParams></ExtraParams>
+  <DateInstalled></DateInstalled>
+  <Description>Telegram bot for monitoring Docker containers and Unraid servers with AI-powered diagnostics.</Description>
+  <DonateText>Support development</DonateText>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for container monitoring (read-only)" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+
+  <Config Name="Config Path" Target="/app/config" Default="/mnt/user/appdata/unraidmonitorbot/config" Mode="rw" Description="Configuration files location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unraidmonitorbot/config</Config>
+
+  <Config Name="Data Path" Target="/app/data" Default="/mnt/user/appdata/unraidmonitorbot/data" Mode="rw" Description="Database and persistent data location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/unraidmonitorbot/data</Config>
+
+  <Config Name="Telegram Bot Token" Target="TELEGRAM_BOT_TOKEN" Default="" Mode="" Description="Bot token from @BotFather on Telegram" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+
+  <Config Name="Allowed Telegram Users" Target="TELEGRAM_ALLOWED_USERS" Default="" Mode="" Description="Comma-separated list of Telegram user IDs allowed to use the bot (get yours from @userinfobot)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+
+  <Config Name="Anthropic API Key" Target="ANTHROPIC_API_KEY" Default="" Mode="" Description="Optional: Enables AI diagnostics and natural language chat" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+
+  <Config Name="Unraid API Key" Target="UNRAID_API_KEY" Default="" Mode="" Description="Optional: Enables Unraid server monitoring (get from Unraid Connect plugin)" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Logging verbosity (DEBUG, INFO, WARNING, ERROR)" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+</Container>
