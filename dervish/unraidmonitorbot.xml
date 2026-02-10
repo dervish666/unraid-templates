@@ -10,7 +10,7 @@
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/dervish666/UnraidMonitor/issues</Support>
+  <Support>https://forums.unraid.net/topic/197009-support-unraid-monitor-bot/</Support>
   <Project>https://github.com/dervish666/UnraidMonitor</Project>
   <Overview>Telegram bot for monitoring Docker containers and Unraid servers. Get real-time alerts, check container status, view logs, control containers, and monitor server health - all from Telegram.&#xD;
 &#xD;
