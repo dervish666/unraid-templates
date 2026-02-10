@@ -50,4 +50,11 @@ Setup requires a Telegram bot token from @BotFather and your Telegram user ID.</
   <Config Name="Unraid API Key" Target="UNRAID_API_KEY" Default="" Mode="" Description="Optional: Enables Unraid server monitoring (get from Unraid Connect plugin)" Type="Variable" Display="always" Required="false" Mask="true"></Config>
 
   <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Logging verbosity (DEBUG, INFO, WARNING, ERROR)" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
+   
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file ownership (99 = nobody on Unraid)" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>                                                                                               
+                                                                                                                                                             
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file ownership (100 = users on Unraid)" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+
+  <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="Timezone for timestamps (e.g. America/New_York)" Type="Variable" Display="advanced" Required="false" Mask="false">Europe/London</Config>
+  
 </Container>
