@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>UnraidMonitorBot</Name>
+  <Name>Unraid Monitor Bot</Name>
   <Repository>dervish/unraidmonitorbot:latest</Repository>
   <Registry>https://hub.docker.com/r/dervish/unraidmonitorbot</Registry>
   <Branch>
