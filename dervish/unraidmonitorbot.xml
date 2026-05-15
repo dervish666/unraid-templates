@@ -23,7 +23,7 @@ Features:&#xD;
 - Container crash alerts with quick action buttons&#xD;
 - Resource monitoring (CPU/memory thresholds)&#xD;
 - Log watching with error detection&#xD;
-- AI-powered diagnostics and container classification (requires Anthropic API key)&#xD;
+- AI-powered diagnostics and container classification (works with Anthropic, OpenAI, or Ollama)&#xD;
 - Unraid server monitoring (temps, array, disks)&#xD;
 - Natural language chat interface&#xD;
 - Smart ignore patterns for known errors&#xD;
@@ -37,8 +37,6 @@ wizard.</Overview>
   <ExtraParams></ExtraParams>
   <DateInstalled></DateInstalled>
   <Description>Telegram bot for monitoring Docker containers and Unraid servers with AI-powered diagnostics and interactive setup wizard.</Description>
-  <DonateText>Support development</DonateText>
-  <DonateLink></DonateLink>
   <DonateImg></DonateImg>
 
   <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for container monitoring (read-only)" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
@@ -51,7 +49,13 @@ wizard.</Overview>
 
   <Config Name="Allowed Telegram Users" Target="TELEGRAM_ALLOWED_USERS" Default="" Mode="" Description="Comma-separated list of Telegram user IDs allowed to use the bot (get yours from @userinfobot)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
 
-  <Config Name="Anthropic API Key" Target="ANTHROPIC_API_KEY" Default="" Mode="" Description="Optional: Enables AI diagnostics, smart container classification, and natural language chat" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Anthropic API Key" Target="ANTHROPIC_API_KEY" Default="" Mode="" Description="Optional: Enables AI features via Anthropic Claude models" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+
+  <Config Name="OpenAI API Key" Target="OPENAI_API_KEY" Default="" Mode="" Description="Optional: Enables AI features via OpenAI models" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+
+  <Config Name="Ollama Host" Target="OLLAMA_HOST" Default="http://localhost:11434" Mode="" Description="Optional: Ollama server URL for local LLM support" Type="Variable" Display="always" Required="false" Mask="false">http://localhost:11434</Config>
+
+  <Config Name="Default Model" Target="DEFAULT_MODEL" Default="" Mode="" Description="Optional: Override default AI model (e.g. qwen2.5:7b, gpt-4o)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 
   <Config Name="Unraid API Key" Target="UNRAID_API_KEY" Default="" Mode="" Description="Optional: Enables Unraid server monitoring (get from Unraid Connect plugin)" Type="Variable" Display="always" Required="false" Mask="true"></Config>
 
