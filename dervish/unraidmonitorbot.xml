@@ -20,14 +20,17 @@ categories (priority, protected, watched, killable, ignored). Re-run anytime wit
 &#xD;
 Features:&#xD;
 - Interactive setup wizard with container auto-classification&#xD;
-- Container crash alerts with quick action buttons&#xD;
-- Resource monitoring (CPU/memory thresholds)&#xD;
-- Log watching with error detection&#xD;
-- AI-powered diagnostics and container classification (works with Anthropic, OpenAI, or Ollama)&#xD;
-- Unraid server monitoring (temps, array, disks)&#xD;
-- Natural language chat interface&#xD;
-- Smart ignore patterns for known errors&#xD;
-- Mute system for alerts&#xD;
+- Container crash, health-check, and restart-loop alerts with one-tap action buttons&#xD;
+- Container control from Telegram - start, stop, restart, and pull/update (with confirmation)&#xD;
+- Auto-heal - opt-in automatic restart of containers that fail their healthcheck, with a storm guard&#xD;
+- Image-update detection - opt-in daily digest of containers with newer images, each with a Pull button&#xD;
+- Resource monitoring with per-container CPU/memory thresholds, adjustable straight from the alert&#xD;
+- Log watching with error detection and smart, AI-generated ignore patterns&#xD;
+- AI-powered diagnostics and container classification (Anthropic, OpenAI, or Ollama; switch at runtime with /model)&#xD;
+- Unraid server monitoring (CPU, memory, temps, UPS, array, disks)&#xD;
+- Natural language chat interface ("what's wrong with plex?", "restart sonarr")&#xD;
+- Mute system to temporarily silence alerts per container, server, or array&#xD;
+- Interactive /manage dashboard for status, resources, mutes, ignores, and feature toggles&#xD;
 &#xD;
 Setup requires a Telegram bot token from @BotFather and your Telegram user ID. After installing, message your bot with /start to begin the setup
 wizard.</Overview>
@@ -36,7 +39,7 @@ wizard.</Overview>
   <TemplateURL>https://raw.githubusercontent.com/dervish666/unraid-templates/main/dervish/unraidmonitorbot.xml</TemplateURL>
   <ExtraParams></ExtraParams>
   <DateInstalled></DateInstalled>
-  <Description>Telegram bot for monitoring Docker containers and Unraid servers with AI-powered diagnostics and interactive setup wizard.</Description>
+  <Description>Telegram bot for monitoring and controlling Docker containers and Unraid servers, with AI-powered diagnostics, auto-heal, and an interactive setup wizard.</Description>
   <DonateImg></DonateImg>
 
   <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket for container monitoring (read-only)" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
