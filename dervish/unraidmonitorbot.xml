@@ -36,6 +36,12 @@ Setup requires a Telegram bot token from @BotFather and your Telegram user ID. A
 wizard.</Overview>
   <Category>Tools:Utilities Network:Management</Category>
   <Icon>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/icon.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/setup-wizard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/log-error-alert.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/resource-alert.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/ai-diagnosis.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/image-updates.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/natural-language.png</Screenshot>
   <TemplateURL>https://raw.githubusercontent.com/dervish666/unraid-templates/main/dervish/unraidmonitorbot.xml</TemplateURL>
   <ExtraParams></ExtraParams>
   <DateInstalled></DateInstalled>
@@ -61,6 +67,10 @@ wizard.</Overview>
   <Config Name="Default Model" Target="DEFAULT_MODEL" Default="" Mode="" Description="Optional: Override default AI model (e.g. qwen2.5:7b, gpt-4o)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 
   <Config Name="Unraid API Key" Target="UNRAID_API_KEY" Default="" Mode="" Description="Optional: Enables Unraid server monitoring (get from Unraid Connect plugin)" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+
+  <Config Name="NUT Username" Target="NUT_USERNAME" Default="" Mode="" Description="Optional: only if your NUT server (UPS monitoring) requires credentials to read" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+
+  <Config Name="NUT Password" Target="NUT_PASSWORD" Default="" Mode="" Description="Optional: only if your NUT server (UPS monitoring) requires credentials to read" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
 
   <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Logging verbosity (DEBUG, INFO, WARNING, ERROR)" Type="Variable" Display="advanced" Required="false" Mask="false">INFO</Config>
 
