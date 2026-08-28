@@ -11,7 +11,7 @@
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/197009-support-unraid-monitor-bot/</Support>
-  <Project>https://github.com/dervish666/UnraidMonitor</Project>
+  <Project>https://scratch-it.co.uk/unraidmonitorbot</Project>
   <Overview>Telegram bot for monitoring Docker containers and Unraid servers. Get real-time alerts, check container status, view logs, control containers,
 and monitor server health - all from Telegram.&#xD;
 &#xD;
@@ -42,6 +42,8 @@ wizard.</Overview>
   <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/ai-diagnosis.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/image-updates.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/natural-language.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/manage-dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/command-menu.png</Screenshot>
   <TemplateURL>https://raw.githubusercontent.com/dervish666/unraid-templates/main/dervish/unraidmonitorbot.xml</TemplateURL>
   <ExtraParams></ExtraParams>
   <DateInstalled></DateInstalled>
