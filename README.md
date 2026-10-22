@@ -12,6 +12,14 @@ Telegram bot for monitoring Docker containers and Unraid servers.
 - **Project:** [GitHub](https://github.com/dervish666/UnraidMonitor)
 - **Support:** [Issues](https://github.com/dervish666/UnraidMonitor/issues)
 
+### Readarr Redux
+
+Ebook and audiobook manager for Usenet and BitTorrent users, an unofficial continuation of Readarr.
+
+- **Repository:** [dervish/readarr-redux](https://hub.docker.com/r/dervish/readarr-redux)
+- **Project:** [GitHub](https://github.com/dervish666/readarr-redux)
+- **Support:** [Discussions](https://github.com/dervish666/readarr-redux/discussions)
+
 ## Installation
 
 These templates are available through Unraid's Community Applications plugin.
