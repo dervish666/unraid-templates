@@ -12,11 +12,9 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/197009-support-unraid-monitor-bot/</Support>
   <Project>https://scratch-it.co.uk/unraidmonitorbot</Project>
-  <Overview>Telegram bot for monitoring Docker containers and Unraid servers. Get real-time alerts, check container status, view logs, control containers,
-and monitor server health - all from Telegram.&#xD;
+  <Overview>Telegram bot for monitoring Docker containers and Unraid servers. Get real-time alerts, check container status, view logs, control containers, and monitor server health - all from Telegram.&#xD;
 &#xD;
-On first launch, an interactive setup wizard in Telegram guides you through connecting to your Unraid server and auto-classifies your containers into
-categories (priority, protected, watched, killable, ignored). Re-run anytime with /setup.&#xD;
+On first launch, an interactive setup wizard in Telegram guides you through connecting to your Unraid server and auto-classifies your containers into categories (priority, protected, watched, killable, ignored). Re-run anytime with /setup.&#xD;
 &#xD;
 Features:&#xD;
 - Interactive setup wizard with container auto-classification&#xD;
@@ -32,8 +30,7 @@ Features:&#xD;
 - Mute system to temporarily silence alerts per container, server, or array&#xD;
 - Interactive /manage dashboard for status, resources, mutes, ignores, and feature toggles&#xD;
 &#xD;
-Setup requires a Telegram bot token from @BotFather and your Telegram user ID. After installing, message your bot with /start to begin the setup
-wizard.</Overview>
+Setup requires a Telegram bot token from @BotFather and your Telegram user ID. After installing, message your bot with /start to begin the setup wizard.</Overview>
   <Category>Tools:Utilities Network:Management</Category>
   <Icon>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/icon.png</Icon>
   <Screenshot>https://raw.githubusercontent.com/dervish666/UnraidMonitor/master/screenshots/setup-wizard.png</Screenshot>
