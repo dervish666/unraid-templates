@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Readarr Redux</Name>
+  <Repository>dervish/readarr-redux:latest</Repository>
+  <Registry>https://hub.docker.com/r/dervish/readarr-redux</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>develop</Tag>
+    <TagDescription>Every merge to the development branch. Expect rough edges.</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/dervish666/readarr-redux/discussions</Support>
+  <Project>https://github.com/dervish666/readarr-redux</Project>
+  <Overview>Readarr Redux is an unofficial continuation of Readarr, the ebook and audiobook manager for Usenet and BitTorrent users, which the Servarr team retired in June 2025. It runs against a metadata source you choose and fixes the bugs that made Readarr lose books.&#xD;
+&#xD;
+You need a metadata source: Readarr Redux has no built-in one. Run rreading-glasses (https://github.com/blampe/rreading-glasses) yourself or use a public instance you trust, then set it in Settings, Metadata Source.&#xD;
+&#xD;
+It is a drop-in for the linuxserver.io Readarr container: config.xml and readarr.db sit at the root of /config. To move over, stop your old Readarr container and copy its appdata folder to the path below first, so the old container keeps an untouched copy. The database upgrade can't be undone without that copy.&#xD;
+&#xD;
+Until a login is set up, the web UI asks for a one-time setup code, which Readarr prints to the container log at every start.&#xD;
+&#xD;
+Not affiliated with or supported by the Servarr team. Please don't ask for help with it in the Readarr or Servarr Discord.</Overview>
+  <Category>Downloaders: MediaApp:Books</Category>
+  <WebUI>http://[IP]:[PORT:8787]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/dervish666/readarr-redux/develop/Logo/256.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/dervish666/unraid-templates/main/dervish/readarr-redux.xml</TemplateURL>
+  <ExtraParams/>
+  <PostArgs/>
+  <Description>Ebook and audiobook manager for Usenet and BitTorrent users, an unofficial continuation of Readarr with a metadata source you choose.</Description>
+  <Requires>A metadata source for books, such as rreading-glasses. Readarr Redux has no default one.</Requires>
+
+  <Config Name="WebUI Port" Target="8787" Default="8787" Mode="tcp" Description="Port for the web UI" Type="Port" Display="always" Required="true" Mask="false">8787</Config>
+
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/readarr-redux" Mode="rw" Description="Database, config.xml, logs and covers" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/readarr-redux</Config>
+
+  <Config Name="Books" Target="/books" Default="" Mode="rw" Description="Your ebook and audiobook library. Add it as a root folder in Settings, Media Management" Type="Path" Display="always" Required="true" Mask="false"></Config>
+
+  <Config Name="Downloads" Target="/downloads" Default="" Mode="rw" Description="Where your download client puts finished downloads. Use the same container path as your download client, or set a remote path mapping" Type="Path" Display="always" Required="true" Mask="false"></Config>
+
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file ownership (99 = nobody on Unraid)" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file ownership (100 = users on Unraid)" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="Permission mask for new files" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+
+  <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="Timezone for timestamps (e.g. America/New_York)" Type="Variable" Display="advanced" Required="false" Mask="false">Europe/London</Config>
+
+</Container>
