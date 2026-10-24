@@ -14,7 +14,7 @@
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/dervish666/readarr-redux/discussions</Support>
+  <Support>https://forums.unraid.net/topic/201024-support-readarr-redux/</Support>
   <Project>https://github.com/dervish666/readarr-redux</Project>
   <Overview>Readarr Redux is an unofficial continuation of Readarr, the ebook and audiobook manager for Usenet and BitTorrent users, which the Servarr team retired in June 2025. It runs against a metadata source you choose and fixes the bugs that made Readarr lose books.&#xD;
 &#xD;

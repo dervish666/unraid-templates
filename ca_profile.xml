@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Maintainer>
+<CommunityApplications>
   <Icon>https://raw.githubusercontent.com/dervish666/PanelsXR/main/deploy/unraid/panelsxr-icon.png</Icon>
   <Profile>
-    Self-hosted apps by dervish. Panel is a WebXR comic reader that streams a self-hosted Komga library into a Meta Quest 3 headset. Unraid Monitor Bot is a Telegram bot for monitoring Docker containers and Unraid servers. Readarr Redux is an unofficial continuation of Readarr, the ebook and audiobook manager.
+    Self-hosted apps by dervish. PanelsXR (Panel) is a WebXR comic reader that streams a self-hosted Komga library into a Meta Quest 3 headset. Unraid Monitor Bot is a Telegram bot for monitoring Docker containers and Unraid servers. Readarr Redux is an unofficial continuation of Readarr, the ebook and audiobook manager.
   </Profile>
   <WebPage>https://github.com/dervish666/unraid-templates</WebPage>
-</Maintainer>
+</CommunityApplications>
